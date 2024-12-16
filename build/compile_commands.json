@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/miguel/projects/raytracingChallenge/build",
+  "command": "/usr/bin/c++ -I/home/miguel/projects/raytracingChallenge/tests/../src -I/home/miguel/projects/raytracingChallenge/tests -g -std=gnu++17 -o CMakeFiles/raytracing.dir/main.cpp.o -c /home/miguel/projects/raytracingChallenge/main.cpp",
+  "file": "/home/miguel/projects/raytracingChallenge/main.cpp",
+  "output": "CMakeFiles/raytracing.dir/main.cpp.o"
+},
+{
+  "directory": "/home/miguel/projects/raytracingChallenge/build",
+  "command": "/usr/bin/c++ -I/home/miguel/projects/raytracingChallenge/tests/../src -I/home/miguel/projects/raytracingChallenge/tests -g -std=gnu++17 -o tests/CMakeFiles/tests.dir/vectors/tuple.cc.o -c /home/miguel/projects/raytracingChallenge/tests/vectors/tuple.cc",
+  "file": "/home/miguel/projects/raytracingChallenge/tests/vectors/tuple.cc",
+  "output": "tests/CMakeFiles/tests.dir/vectors/tuple.cc.o"
+},
+{
+  "directory": "/home/miguel/projects/raytracingChallenge/build",
+  "command": "/usr/bin/c++ -g -std=gnu++17 -o src/CMakeFiles/vectors.dir/vectors/tuple.cpp.o -c /home/miguel/projects/raytracingChallenge/src/vectors/tuple.cpp",
+  "file": "/home/miguel/projects/raytracingChallenge/src/vectors/tuple.cpp",
+  "output": "src/CMakeFiles/vectors.dir/vectors/tuple.cpp.o"
+}
+]

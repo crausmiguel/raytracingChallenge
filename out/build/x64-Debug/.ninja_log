@@ -1,0 +1,9 @@
+# ninja log v5
+12	63	7560880121066724	src/CMakeFiles/vectors.dir/vectors/tuple.cpp.obj	64f195f98d549a0f
+64	119	7560880121606686	src/vectors.lib	d8903e4dda590af1
+9	467	7560880125086985	tests/CMakeFiles/tests.dir/vectors/tuple.cc.obj	79a4946be2d63cce
+5	472	7560880125086985	CMakeFiles/raytracing.dir/main.cpp.obj	8022f03239dfaa31
+467	501	7560880125425012	tests/tests.lib	9d8a4c339ab271a0
+501	712	7560880127424991	raytracing.exe	c7e12e27a9ed8458
+17	444	7560880265769845	CMakeFiles/raytracing.dir/main.cpp.obj	8022f03239dfaa31
+444	553	7560880266639548	raytracing.exe	c7e12e27a9ed8458

@@ -1,0 +1,9 @@
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/CMakeFiles/raytracing.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/tests/CMakeFiles/tests.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/tests/CMakeFiles/edit_cache.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/tests/CMakeFiles/rebuild_cache.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/src/CMakeFiles/vectors.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
+C:/Users/vitor/Downloads/raytracingChallenge/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir

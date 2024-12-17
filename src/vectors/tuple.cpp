@@ -1,4 +1,5 @@
 #include "tuple.h"
+#include "utils/utils.cc"
 
 Tuple::Tuple(float x, float y, float z, int w){
        m_x = x;
@@ -42,6 +43,23 @@ void Tuple::setW(int w){
 bool Tuple::isTuple(TupleType type){
        return m_w == type;
 }
+
+bool compareTuples(Tuple& tupleX, Tuple& tupleY){
+       return compareFloat(tupleX.getX(), tupleY.getX()) &&
+       compareFloat(tupleX.getY(), tupleY.getY()) &&
+       compareFloat(tupleX.getZ(), tupleY.getZ()) &&
+       compareFloat(tupleX.getW(), tupleY.getW());
+}
+
+Tuple addTuple(Tuple& tupleX, Tuple& tupleY){
+       float x = tupleX.getX() + tupleY.getX();
+       float y = tupleX.getY() + tupleY.getY();
+       float z = tupleX.getZ() + tupleY.getZ();
+       float w = tupleX.getW() + tupleY.getW();
+       return Tuple(x,y,z,w);
+
+}
+
 
 Tuple Vector(float x, float y, float z){
     return Tuple(x, y, z, TupleType::VECTOR);

@@ -1,4 +1,4 @@
-# Install script for directory: /home/miguel/projects/raytracingChallenge/src
+# Install script for directory: /home/miguel/Documentos/raytracingChallenge/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

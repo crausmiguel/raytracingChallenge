@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/libtests.a"
+			"path" : "src/libvectors.a"
 		}
 	],
 	"backtrace" : 1,
@@ -17,8 +17,7 @@
 		],
 		"files" : 
 		[
-			"tests/CMakeLists.txt",
-			"CMakeLists.txt"
+			"src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -34,23 +33,14 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 4,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 5,
+				"line" : 8,
 				"parent" : 0
-			},
-			{
-				"file" : 1
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 11,
-				"parent" : 4
 			}
 		]
 	},
@@ -67,11 +57,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/miguel/projects/raytracingChallenge/tests/../src"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/home/miguel/projects/raytracingChallenge/tests"
+					"path" : "/home/miguel/Documentos/raytracingChallenge/src"
 				}
 			],
 			"language" : "CXX",
@@ -93,16 +79,16 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "vectors::@145eef247bfb46b6828c"
+			"id" : "utils::@145eef247bfb46b6828c"
 		}
 	],
-	"id" : "tests::@a44f0ac069e85531cdee",
-	"name" : "tests",
-	"nameOnDisk" : "libtests.a",
+	"id" : "vectors::@145eef247bfb46b6828c",
+	"name" : "vectors",
+	"nameOnDisk" : "libvectors.a",
 	"paths" : 
 	{
-		"build" : "tests",
-		"source" : "tests"
+		"build" : "src",
+		"source" : "src"
 	},
 	"sourceGroups" : 
 	[
@@ -119,7 +105,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/vectors/tuple.cc",
+			"path" : "src/vectors/tuple.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

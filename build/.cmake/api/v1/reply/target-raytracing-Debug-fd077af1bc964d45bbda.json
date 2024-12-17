@@ -43,6 +43,12 @@
 				"file" : 1,
 				"line" : 4,
 				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 3
 			}
 		]
 	},
@@ -59,11 +65,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/miguel/projects/raytracingChallenge/tests/../src"
+					"path" : "/home/miguel/Documentos/raytracingChallenge/tests/../src"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/miguel/projects/raytracingChallenge/tests"
+					"path" : "/home/miguel/Documentos/raytracingChallenge/tests"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/miguel/Documentos/raytracingChallenge/src"
 				}
 			],
 			"language" : "CXX",
@@ -90,6 +100,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "vectors::@145eef247bfb46b6828c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "utils::@145eef247bfb46b6828c"
 		}
 	],
 	"id" : "raytracing::@6890427a1f51a3e7e1df",
@@ -113,6 +127,11 @@
 			{
 				"backtrace" : 4,
 				"fragment" : "src/libvectors.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "src/libutils.a",
 				"role" : "libraries"
 			}
 		],

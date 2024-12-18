@@ -44,6 +44,14 @@ bool Tuple::isTuple(TupleType type){
        return m_w == type;
 }
 
+Tuple Vector(float x, float y, float z){
+    return Tuple(x, y, z, TupleType::VECTOR);
+}
+
+Tuple Point(float x, float y, float z){
+    return Tuple(x, y, z, TupleType::POINT);
+}
+
 bool compareTuples(Tuple& tupleX, Tuple& tupleY){
        return compareFloat(tupleX.getX(), tupleY.getX()) &&
        compareFloat(tupleX.getY(), tupleY.getY()) &&
@@ -57,17 +65,26 @@ Tuple addTuple(Tuple& tupleX, Tuple& tupleY){
        float z = tupleX.getZ() + tupleY.getZ();
        float w = tupleX.getW() + tupleY.getW();
        return Tuple(x,y,z,w);
+}
+
+Tuple subtractTuple(Tuple& tupleX, Tuple& tupleY){
+       float x = tupleX.getX() - tupleY.getX();
+       float y = tupleX.getY() - tupleY.getY();
+       float z = tupleX.getZ() - tupleY.getZ();
+       float w = tupleX.getW() - tupleY.getW();
+       return Tuple(x,y,z,w);
 
 }
 
+Tuple negateTuple(Tuple& tupleX){
 
-Tuple Vector(float x, float y, float z){
-    return Tuple(x, y, z, TupleType::VECTOR);
+       Tuple zeroTuple = Tuple(0,0,0,0);
+       Tuple negatedTuple = subtractTuple(tupleX, zeroTuple);
+       return negatedTuple;
 }
 
-Tuple Point(float x, float y, float z){
-    return Tuple(x, y, z, TupleType::POINT);
-}
+
+
 
 
 

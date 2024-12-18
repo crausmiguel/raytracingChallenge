@@ -29,7 +29,11 @@ Tuple Point(float x,float y, float z);
 
 Tuple Vector(float x,float y, float z);
 
-bool compareTuples(Tuple& tupleX, Tuple& tupleY);
-
 Tuple addTuple(Tuple& tupleX, Tuple& tupleY);
+
+Tuple subtractTuple(Tuple& tupleX, Tuple& tupleY);
+
+Tuple negateTuple(Tuple& tupleX);
+
+bool compareTuples(Tuple& tupleX, Tuple& tupleY);
 

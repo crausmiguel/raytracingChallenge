@@ -1,7 +1,7 @@
 #include "tuple.h"
 #include "utils/utils.cc"
 
-Tuple::Tuple(float x, float y, float z, int w){
+Tuple::Tuple(float x, float y, float z, float w){
        m_x = x;
        m_y = y;
        m_z = z;
@@ -32,11 +32,11 @@ void Tuple::setZ(float z){
        m_z = z;
 };
 
-int Tuple::getW(){
+float Tuple::getW(){
        return m_w;
 };
 
-void Tuple::setW(int w){
+void Tuple::setW(float w){
        m_w = w;
 };
 
@@ -76,14 +76,23 @@ Tuple subtractTuple(Tuple& tupleX, Tuple& tupleY){
 
 }
 
-Tuple negateTuple(Tuple& tupleX){
+Tuple negateTuple(Tuple& tuple){
 
        Tuple zeroTuple = Tuple(0,0,0,0);
-       Tuple negatedTuple = subtractTuple(tupleX, zeroTuple);
+       Tuple negatedTuple = subtractTuple(tuple, zeroTuple);
        return negatedTuple;
 }
 
+Tuple scalarTuple(Tuple& tuple, float scalar){
 
+       float x = tuple.getX()*scalar;
+       float y = tuple.getY()*scalar;
+       float z = tuple.getZ()*scalar;
+       float w = tuple.getW()*scalar;
+
+       return Tuple(x,y,z,w);
+
+}
 
 
 

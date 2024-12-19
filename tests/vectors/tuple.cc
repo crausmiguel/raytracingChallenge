@@ -6,10 +6,9 @@
 
 void shouldReturnTrueWhenPoint() {
     Tuple point = Point(1.0f, 2.0f, 3.0f);
-
-    assert(compareFloat(point.getX(),1.0f));
-    assert(compareFloat(point.getY(),2.0f));
-    assert(compareFloat(point.getZ(),3.0f));
+    assert(compareFloat(point.getX(),1.0f) == true);
+    assert(compareFloat(point.getY(),2.0f) == true);
+    assert(compareFloat(point.getZ(),3.0f) == true);
     assert(point.isTuple(TupleType::POINT) == true);
     std::cout << "✔ shouldReturnTrueWhenPoint\n";
 }
@@ -17,9 +16,9 @@ void shouldReturnTrueWhenPoint() {
 void shouldReturnFalseWhenPoint() {
     Tuple notPoint = Vector(1.0f, 2.0f, 3.0f);
 
-    assert(compareFloat(notPoint.getX(),1.0f));
-    assert(compareFloat(notPoint.getY(),2.0f));
-    assert(compareFloat(notPoint.getZ(),3.0f));
+    assert(compareFloat(notPoint.getX(),1.0f) == true);
+    assert(compareFloat(notPoint.getY(),2.0f) == true);
+    assert(compareFloat(notPoint.getZ(),3.0f) == true);
     assert(notPoint.isTuple(TupleType::POINT) == false);
     std::cout << "✔ shouldReturnFalseWhenPoint\n";
 }
@@ -96,8 +95,7 @@ void shouldReturnNegatedTuple(){
     Tuple tuple = Tuple(1.0f ,-2.0f ,3.0f, -4);
 
     Tuple negatedVector = negateTuple(vector);
-    Tuple negatedTuple = negateTuple(tuple);
-
+    Tuple negatedTuple = -negateTuple(tuple);
 
     Tuple resultVector = Vector(-1.0f, 2.0f, -3.0f);
     Tuple resultTuple = Tuple(-1.0f, 2.0f, -3.0f, 4);
@@ -107,10 +105,46 @@ void shouldReturnNegatedTuple(){
     std::cout << "✔ shouldReturnNegatedTuple\n";
 }
 
+void shouldReturnNegatedTupleOperador(){
+    Tuple vector = Vector(1.0f ,-2.0f ,3.0f);
+    Tuple tuple = Tuple(1.0f ,-2.0f ,3.0f, -4);
+
+    Tuple negatedVector = -vector;
+    Tuple negatedTuple = -tuple;
+
+    Tuple resultVector = Vector(-1.0f, 2.0f, -3.0f);
+    Tuple resultTuple = Tuple(-1.0f, 2.0f, -3.0f, 4);
+
+    assert(compareTuples(negatedVector, resultVector) == true);
+    assert(compareTuples(negatedTuple, resultTuple) == true);
+    std::cout << "✔ shouldReturnNegatedTupleOperador\n";
+}
+
+void shouldScaleTupleByScalar(){
+    Tuple tuple1 = Tuple(1.0f, -2.0f, 3.0f, -4.0f);
+
+    Tuple mutipliedTuple = scalarTuple(tuple1, 3.5);
+    Tuple result = Tuple(3.5f, -7.0f, 10.5f, -14.0f);
+
+    assert(compareTuples(mutipliedTuple, result));
+    std::cout << "✔ shouldScaleTuple\n";
+}
+
+void shouldScaleTupleByFraction(){
+    Tuple tuple1 = Tuple(1.0f, -2.0f, 3.0f, -4.0f);
+
+    Tuple mutipliedTuple = scalarTuple(tuple1, 0.5);
+    Tuple result = Tuple(0.5f, -1.0f, 1.5f, -2.0f);
+
+    assert(compareTuples(mutipliedTuple, result));
+    std::cout << "✔ shouldScaleTupleByFraction\n";
+}
+
 
 
 void runTupleTests(){
     shouldReturnTrueWhenPoint();
+
     shouldReturnFalseWhenPoint();
     shouldReturnTrueWhenComparingTuples();
     shouldReturnFalseWhenComparingTuples();
@@ -120,6 +154,9 @@ void runTupleTests(){
     shouldReturnRightValueWhenSubtractingTwoPoints();
     shouldReturnRightValueWhenSubtractingTwoVectors();
     shouldReturnNegatedTuple();
+    shouldReturnNegatedTupleOperador();
+    shouldScaleTupleByScalar();
+    shouldScaleTupleByFraction();
     std::cout << "-- ALL TUPLE tests passed --\n";
 
 }

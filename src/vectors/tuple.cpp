@@ -98,6 +98,9 @@ Tuple scalarTuple(Tuple& tuple, float scalar){
 
 }
 
+float magnitude(Tuple& tuple){
+       return 0.0f;
+}
 
 
 

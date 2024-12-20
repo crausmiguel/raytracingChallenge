@@ -140,11 +140,63 @@ void shouldScaleTupleByFraction(){
     std::cout << "✔ shouldScaleTupleByFraction\n";
 }
 
+void shouldCalculateMagnitudeFromVector1(){
+
+    Tuple vector = Vector(1.0f, 0.0f, 0.0f);
+
+    float magnitudeResult = magnitude(vector);
+
+    assert(compareFloat(magnitudeResult, 1.0f));
+    std::cout << "✔ shouldCalculateMagnitudeFromVector1\n";
+}
+
+
+void shouldCalculateMagnitudeFromVector2(){
+
+    Tuple vector = Vector(0.0f, 1.0f, 0.0f);
+
+    float magnitudeResult = magnitude(vector);
+
+    assert(compareFloat(magnitudeResult, 1.0f));
+    std::cout << "✔ shouldCalculateMagnitudeFromVector2\n";
+}
+
+
+void shouldCalculateMagnitudeFromVector3(){
+
+    Tuple vector = Vector(0.0f, 0.0f, 1.0f);
+
+    float magnitudeResult = magnitude(vector);
+
+    assert(compareFloat(magnitudeResult, 1.0f));
+    std::cout << "✔ shouldCalculateMagnitudeFromVector3\n";
+}
+
+
+void shouldCalculateMagnitudeFromVector4(){
+
+    Tuple vector = Vector(1.0f, 2.0f, 3.0f);
+
+    float magnitudeResult = magnitude(vector);
+
+    assert(compareFloat(magnitudeResult, 1.0f));
+    std::cout << "✔ shouldCalculateMagnitudeFromVector4\n";
+}
+
+void shouldCalculateMagnitudeFromVector5(){
+
+    Tuple vector = Vector(-1.0f, -2.0f, -3.0f);
+
+    float magnitudeResult = magnitude(vector);
+
+    assert(compareFloat(roundToFourDecimal(magnitudeResult), 1.0f));
+    std::cout << "✔ shouldCalculateMagnitudeFromVector5\n";
+}
+
 
 
 void runTupleTests(){
     shouldReturnTrueWhenPoint();
-
     shouldReturnFalseWhenPoint();
     shouldReturnTrueWhenComparingTuples();
     shouldReturnFalseWhenComparingTuples();
@@ -157,6 +209,11 @@ void runTupleTests(){
     shouldReturnNegatedTupleOperador();
     shouldScaleTupleByScalar();
     shouldScaleTupleByFraction();
+    shouldCalculateMagnitudeFromVector1();
+    shouldCalculateMagnitudeFromVector2();
+    shouldCalculateMagnitudeFromVector3();
+    shouldCalculateMagnitudeFromVector4();
+    shouldCalculateMagnitudeFromVector5();
     std::cout << "-- ALL TUPLE tests passed --\n";
 
 }

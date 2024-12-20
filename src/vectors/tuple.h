@@ -40,3 +40,4 @@ Tuple scalarTuple(Tuple& tuple, float scalar);
 
 bool compareTuples(Tuple& tupleX, Tuple& tupleY);
 
+float magnitude(Tuple& tuple);

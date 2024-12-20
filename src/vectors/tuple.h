@@ -1,9 +1,8 @@
 #pragma once
 
-enum TupleType{
-    VECTOR = 0,
-    POINT = 1
-};
+
+constexpr float VECTOR = 0.0f;
+constexpr float POINT = 1.0f;
 
 class Tuple{
 public:
@@ -20,7 +19,8 @@ public:
         void setZ(float z);
         void setW(float w);
 public:
-        bool isTuple(TupleType type);
+        bool isTuplePoint();
+        bool isTupleVector();
 
 private:
         float m_x, m_y, m_z, m_w;

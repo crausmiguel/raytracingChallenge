@@ -9,7 +9,7 @@ void shouldReturnTrueWhenPoint() {
     assert(compareFloat(point.getX(),1.0f) == true);
     assert(compareFloat(point.getY(),2.0f) == true);
     assert(compareFloat(point.getZ(),3.0f) == true);
-    assert(point.isTuple(TupleType::POINT) == true);
+    assert(point.isTuplePoint() == true);
     std::cout << "✔ shouldReturnTrueWhenPoint\n";
 }
 
@@ -19,7 +19,7 @@ void shouldReturnFalseWhenPoint() {
     assert(compareFloat(notPoint.getX(),1.0f) == true);
     assert(compareFloat(notPoint.getY(),2.0f) == true);
     assert(compareFloat(notPoint.getZ(),3.0f) == true);
-    assert(notPoint.isTuple(TupleType::POINT) == false);
+    assert(notPoint.isTuplePoint() == false);
     std::cout << "✔ shouldReturnFalseWhenPoint\n";
 }
 
@@ -35,14 +35,14 @@ void shouldReturnFalseWhenComparingTuples() {
     Tuple point1 = Point(1.0f, 2.0f, 3.0f);
     Tuple point2 = Point(3.0f, 2.0f, 1.0f);
 
-    assert(compareTuples(point1, point2) == true);
+    assert(compareTuples(point1, point2) == false);
     std::cout << "✔ shouldReturnFalseWhenComparingTuples\n";
 }
 
 void shouldReturnRightValueWhenAddingVectorAndPoint() {
     Tuple vector = Vector(3.0f, -2.0f, 5.0f);
     Tuple point = Point(-2.0f, 3.0f, 1.0f);
-    Tuple resultTuple = Tuple(1.0f, 1.0f, 6.0f, TupleType::POINT);
+    Tuple resultTuple = Tuple(1.0f, 1.0f, 6.0f, POINT);
     Tuple tupleSum = addTuple(point, vector);
 
     assert(compareTuples(tupleSum, resultTuple) == true);
@@ -52,7 +52,7 @@ void shouldReturnRightValueWhenAddingVectorAndPoint() {
 void shoulReturndRightValueWhenAddingVectors() {
     Tuple vector1 = Vector(1.0f, 2.0f, 3.0f);
     Tuple vector2 = Vector(3.0f, 2.0f, 1.0f);
-    Tuple resultTuple = Tuple(4.0f, 4.0f, 4.0f, TupleType::VECTOR);
+    Tuple resultTuple = Tuple(4.0f, 4.0f, 4.0f, VECTOR);
     Tuple tupleSum = addTuple(vector1, vector2);
 
     assert(compareTuples(tupleSum, resultTuple) == true);
@@ -61,9 +61,9 @@ void shoulReturndRightValueWhenAddingVectors() {
 
 
 void shouldReturnRightValueWhenSubtractingVectorFromPoint() {
-    Tuple vector = Vector(3.0f, 2.0f, 1.0f);
-    Tuple point = Point(5.0f, 6.0f, 7.0f);
-    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, TupleType::POINT);
+    Tuple point = Point(3.0f, 2.0f, 1.0f);
+    Tuple vector = Vector(5.0f, 6.0f, 7.0f);
+    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, POINT);
     Tuple tupleSub = subtractTuple(point, vector);
 
     assert(compareTuples(tupleSub, resultTuple) == true);
@@ -73,7 +73,7 @@ void shouldReturnRightValueWhenSubtractingVectorFromPoint() {
 void shouldReturnRightValueWhenSubtractingTwoPoints() {
     Tuple point1 = Point(3.0f, 2.0f, 1.0f);
     Tuple point2 = Point(5.0f, 6.0f, 7.0f);
-    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, TupleType::VECTOR);
+    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, VECTOR);
     Tuple tupleSub = subtractTuple(point1, point2);
 
     assert(compareTuples(tupleSub, resultTuple) == true);
@@ -83,7 +83,7 @@ void shouldReturnRightValueWhenSubtractingTwoPoints() {
 void shouldReturnRightValueWhenSubtractingTwoVectors() {
     Tuple vector1 = Vector(3.0f, 2.0f, 1.0f);
     Tuple vector2 = Vector(5.0f, 6.0f, 7.0f);
-    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, TupleType::VECTOR);
+    Tuple resultTuple = Tuple(-2.0f, -4.0f, -6.0f, VECTOR);
     Tuple tupleSub = subtractTuple(vector1, vector2);
 
     assert(compareTuples(tupleSub, resultTuple) == true);
@@ -92,13 +92,13 @@ void shouldReturnRightValueWhenSubtractingTwoVectors() {
 
 void shouldReturnNegatedTuple(){
     Tuple vector = Vector(1.0f ,-2.0f ,3.0f);
-    Tuple tuple = Tuple(1.0f ,-2.0f ,3.0f, -4);
+    Tuple tuple = Tuple(1.0f ,-2.0f ,3.0f, -4.0f);
 
     Tuple negatedVector = negateTuple(vector);
-    Tuple negatedTuple = -negateTuple(tuple);
+    Tuple negatedTuple = negateTuple(tuple);
 
     Tuple resultVector = Vector(-1.0f, 2.0f, -3.0f);
-    Tuple resultTuple = Tuple(-1.0f, 2.0f, -3.0f, 4);
+    Tuple resultTuple = Tuple(-1.0f, 2.0f, -3.0f, 4.0f);
 
     assert(compareTuples(negatedVector, resultVector) == true);
     assert(compareTuples(negatedTuple, resultTuple) == true);
